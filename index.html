@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore o mundo de Harry Potter, conheça personagens das casas de Hogwarts e descubra um feitiço.">
+  <title>Harry Potter | Explore Hogwarts</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c111b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia' font-size='25' fill='%23dfc48a'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="inicio">
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <main id="conteudo">
+    <header class="apresentacao">
+      <img class="capa" src="hogwarts.jpg" alt="Castelo de Hogwarts iluminado à noite, sob um céu com nuvens.">
+      <div class="introducao">
+        <p class="chamada">BEM-VINDO AO MUNDO BRUXO</p>
+        <h1>Harry Potter</h1>
+        <p>Uma escola de magia. Quatro casas. Muitas histórias para descobrir.</p>
+        <a class="botao" href="#personagens">Explore Hogwarts</a>
+      </div>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre a saga</h2>
+      <p>Harry Potter descobre que é um bruxo e passa a estudar na Escola de Magia e Bruxaria de Hogwarts. Lá, conhece novos amigos, aprende feitiços e enfrenta os mistérios do mundo bruxo.</p>
+      <p>Em Hogwarts, os alunos fazem parte de uma das quatro casas: Grifinória, Sonserina, Corvinal e Lufa-Lufa. Cada uma tem sua história e valoriza diferentes qualidades.</p>
+    </section>
+
+    <section id="personagens">
+      <h2>As casas e seus personagens</h2>
+      <p>Conheça personagens que passaram por Hogwarts. Escolha uma casa para ver seus integrantes.</p>
+
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar personagens por casa" hidden>
+        <button class="filtro" type="button" data-casa="grifinoria" aria-pressed="false">Grifinória</button>
+        <button class="filtro" type="button" data-casa="sonserina" aria-pressed="false">Sonserina</button>
+        <button class="filtro" type="button" data-casa="corvinal" aria-pressed="false">Corvinal</button>
+        <button class="filtro" type="button" data-casa="lufa-lufa" aria-pressed="false">Lufa-Lufa</button>
+      </div>
+      <p id="resultado-filtro" class="resultado" role="status" hidden></p>
+      <noscript><p>Ative o JavaScript para escolher uma casa, ver seus personagens e revelar o feitiço.</p></noscript>
+
+      <div class="personagens" id="lista-personagens" hidden>
+        <article class="personagem" data-casa="grifinoria">
+          <img src="harry.jpg" alt="Harry Potter usando os óculos redondos." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa grifinoria">Grifinória</p>
+            <h3>Harry Potter</h3>
+            <p>Corajoso e leal aos amigos, Harry descobre em Hogwarts um novo lar e seu lugar no mundo bruxo.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="grifinoria">
+          <img src="hermione-granger.jpg" alt="Hermione Granger em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa grifinoria">Grifinória</p>
+            <h3>Hermione Granger</h3>
+            <p>Estudiosa e determinada, Hermione usa sua inteligência para ajudar Harry e Rony nas aventuras em Hogwarts.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="grifinoria">
+          <img src="ron-weasley.jpg" alt="Rony Weasley em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa grifinoria">Grifinória</p>
+            <h3>Rony Weasley</h3>
+            <p>Leal e bem-humorado, Rony é um dos melhores amigos de Harry e está sempre ao lado do trio.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="sonserina">
+          <img src="draco.jpg" alt="Draco Malfoy em uma cena dos filmes de Harry Potter." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa sonserina">Sonserina</p>
+            <h3>Draco Malfoy</h3>
+            <p>Orgulhoso de sua casa e de sua família, Draco é um dos rivais de Harry durante os anos na escola.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="sonserina">
+          <img src="severus-snape.jpg" alt="Severo Snape em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa sonserina">Sonserina</p>
+            <h3>Severo Snape</h3>
+            <p>Professor de Poções e diretor da Sonserina, Snape é conhecido por sua postura exigente e misteriosa.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="sonserina">
+          <img src="bellatrix-lestrange.jpg" alt="Bellatrix Lestrange em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa sonserina">Sonserina</p>
+            <h3>Bellatrix Lestrange</h3>
+            <p>Integrante da família Black e seguidora de Voldemort, Bellatrix é uma das bruxas mais temidas da saga.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="corvinal">
+          <img src="luna.jpg" alt="Luna Lovegood em uma cena dos filmes de Harry Potter." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa corvinal">Corvinal</p>
+            <h3>Luna Lovegood</h3>
+            <p>Criativa e de mente aberta, Luna enxerga o mundo de um jeito próprio e se torna uma grande amiga de Harry.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="corvinal">
+          <img src="cho-chang.jpg" alt="Cho Chang em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa corvinal">Corvinal</p>
+            <h3>Cho Chang</h3>
+            <p>Aluna da Corvinal, Cho joga como apanhadora no time de quadribol de sua casa.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="corvinal">
+          <img src="filius-flitwick.jpg" alt="Filius Flitwick em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa corvinal">Corvinal</p>
+            <h3>Filius Flitwick</h3>
+            <p>Professor de Feitiços e diretor da Corvinal, Flitwick compartilha seu conhecimento de magia com os alunos.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="lufa-lufa">
+          <img src="cedrico.jpg" alt="Cedrico Diggory em uma cena dos filmes de Harry Potter." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa lufa-lufa">Lufa-Lufa</p>
+            <h3>Cedrico Diggory</h3>
+            <p>Talentoso e justo, Cedrico representa Hogwarts no Torneio Tribruxo e demonstra respeito pelos adversários.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="lufa-lufa">
+          <img src="nymphadora-tonks.jpg" alt="Ninfadora Tonks em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa lufa-lufa">Lufa-Lufa</p>
+            <h3>Ninfadora Tonks</h3>
+            <p>Corajosa e divertida, Tonks trabalha como auror e consegue mudar a própria aparência por ser metamorfomaga.</p>
+          </div>
+        </article>
+        <article class="personagem" data-casa="lufa-lufa">
+          <img src="newt-scamander.jpg" alt="Newt Scamander em uma cena dos filmes do mundo bruxo." width="600" height="416" loading="lazy">
+          <div class="texto-personagem">
+            <p class="casa lufa-lufa">Lufa-Lufa</p>
+            <h3>Newt Scamander</h3>
+            <p>Antigo aluno da Lufa-Lufa, Newt estuda e protege criaturas mágicas em suas viagens pelo mundo.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="feiticos" class="feiticos">
+      <p class="chamada">UM POUCO DE MAGIA</p>
+      <h2>Seu primeiro feitiço</h2>
+      <p>Até uma pequena luz pode ajudar a explorar o desconhecido.</p>
+      <button id="botao-feitico" class="botao" type="button" aria-expanded="false" aria-controls="descricao-feitico" hidden>Revelar feitiço</button>
+      <div id="descricao-feitico" class="descricao-feitico" hidden>
+        <h3>Lumos</h3>
+        <p>O feitiço Lumos acende uma luz na ponta da varinha. Para apagá-la, o bruxo usa Nox.</p>
+      </div>
+    </section>
+    <a class="voltar" href="#inicio">Voltar ao início</a>
+  </main>
+  <footer>
+    <p>Desenvolvido por Ana Júlia · Projeto de Front-end — PROA Transforme-se</p>
+  </footer>
+</body>
+</html>
